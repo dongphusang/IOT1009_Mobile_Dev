@@ -7,7 +7,42 @@
     tools:context=".MainActivity">
 
 
-    
+    <LinearLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Input field -->
+        <EditText
+            android:id="@+id/input_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="your task"
+            android:inputType="textMultiLine"/>
+
+        <!-- Add task button -->
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="confirm"
+            android:textStyle="bold" />
+
+        <!-- Display to-do list -->
+        <ListView
+            android:id="@+id/task_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
