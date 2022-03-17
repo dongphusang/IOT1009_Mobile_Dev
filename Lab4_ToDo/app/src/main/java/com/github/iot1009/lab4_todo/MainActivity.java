@@ -33,6 +33,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // assign listeners
         confirm.setOnClickListener(this);
+        taskList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+           public void onItemClick(AdapterView<?> adapterView, View v, int position, long id) {
+               TextView textView = (TextView)v;
+               textView.setPaintFlags(textView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+           }
+        });
 
     }
 
