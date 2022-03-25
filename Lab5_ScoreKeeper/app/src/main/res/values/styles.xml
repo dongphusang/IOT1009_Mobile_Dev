@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- custom button style -->
     <style name="customButton" parent="Widget.AppCompat.Button">
         <item name="android:layout_width">120dp</item>
         <item name="android:layout_height">60dp</item>
@@ -8,12 +9,14 @@
         <item name="cornerRadius">5dp</item>
     </style>
 
+    <!-- custom text style for themes -->
     <style name="TextStyle">
         <item name="textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
+    <!-- custom text format for team name -->
     <style name="customTeamName">
         <item name="android:textSize">30sp</item>
         <item name="android:layout_width">wrap_content</item>
@@ -23,6 +26,7 @@
         <item name="android:textAlignment">center</item>
     </style>
 
+    <!-- custom text format for team score -->
     <style name="customScoreLabel">
         <item name="android:textSize">50sp</item>
         <item name="android:textAlignment">center</item>
@@ -31,7 +35,7 @@
         <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
-
+    <!-- custom style for switch -->
     <style name="customSwitch">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -39,6 +43,7 @@
         <item name="android:layout_marginTop">30dp</item>
     </style>
 
+    <!-- custom style for radio button -->
     <style name="customRadio">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
