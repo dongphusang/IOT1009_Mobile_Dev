@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lab5_ScoreKeeper</string>
+    <string name="first_team">Corno</string>
+    <string name="second_team">Forest</string>
+    <string name="initial_score">0</string>
+    <string name="inc_butt_label">increase</string>
+    <string name="dec_butt_label">decrease</string>
+    <string name="basketball_sys">Basketball: 1, 2, 4</string>
+    <string name="american_foot_sys">American Football: 1, 2, 3</string>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="customButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">100dp</item>
+        <item name="cornerRadius">5dp</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="customTeamName">
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">49dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="customScoreLabel">
+        <item name="android:textSize">50sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">95dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+
+    <style name="customSwitch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">30dp</item>
+    </style>
+
+    <style name="customRadio">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">start</item>
+    </style>
+
+</resources>

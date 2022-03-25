@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.Lab2_ScoreKeeper"
+    tools:context=".MainActivity">
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="6">
+
+        <TextView
+            android:id="@+id/first_team"
+            android:layout_column="0"
+            android:layout_row="0"
+            style="@style/customTeamName"
+            android:text="@string/first_team"/>
+
+        <TextView
+            android:id="@+id/second_team"
+            android:layout_column="1"
+            android:layout_row="0"
+            style="@style/customTeamName"
+            android:text="@string/second_team" />
+
+        <TextView
+            android:id="@+id/second_team_point"
+            android:layout_column="1"
+            android:layout_row="1"
+            style="@style/customScoreLabel"
+            android:text="@string/initial_score" />
+
+        <TextView
+            android:id="@+id/first_team_point"
+            android:layout_column="0"
+            android:layout_row="1"
+            style="@style/customScoreLabel"
+            android:text="@string/initial_score" />
+
+        <Button
+            android:id="@+id/increase_button"
+            android:layout_column="0"
+            android:layout_row="2"
+            style="@style/customButton"
+            android:text="@string/inc_butt_label" />
+
+        <Button
+            android:id="@+id/decrease_button"
+            android:layout_column="1"
+            android:layout_row="2"
+            style="@style/customButton"
+            android:text="@string/dec_butt_label"/>
+
+        <Switch
+            android:id="@+id/team_selector"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            style="@style/customSwitch"
+            android:text="@string/first_team" />
+
+        <RadioButton
+            android:id="@+id/basketball"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:layout_marginTop="100dp"
+            style="@style/customRadio"
+            android:text="@string/basketball_sys" />
+
+        <RadioButton
+            android:id="@+id/american_football"
+            android:layout_column="0"
+            android:layout_row="5"
+            style="@style/customRadio"
+            android:text="@string/american_foot_sys" />
+    </GridLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

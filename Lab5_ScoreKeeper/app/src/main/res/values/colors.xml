@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- light theme -->
+    <color name="light_primary">#FFA2D5AB</color>
+    <color name="light_pri_variant">#FF557B83</color>
+    <color name="light_on_pri">#FFFFFFFF</color>
+    <color name="light_secondary">#FF03DAC5</color>
+    <color name="light_sec_variant">#FF018786</color>
+    <color name="light_on_sec">#FF000000</color>
+
+
+    <!-- dark theme -->
+    <color name="blue_pri_variant">#FF248BD6</color>
+    <color name="blue_primary">#FF83B8FF</color>
+    <color name="on_primary">#FF000000</color>
+    <color name="blue_sec_variant">#FF1F9CE4</color>
+    <color name="blue_secondary">#FFC6CDFF</color>
+    <color name="on_secondary">#FF000000</color>
+
+
+</resources>
