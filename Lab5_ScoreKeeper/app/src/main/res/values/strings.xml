@@ -7,4 +7,6 @@
     <string name="dec_butt_label">decrease</string>
     <string name="basketball_sys">Basketball: 1, 2, 4</string>
     <string name="american_foot_sys">American Football: 1, 2, 3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

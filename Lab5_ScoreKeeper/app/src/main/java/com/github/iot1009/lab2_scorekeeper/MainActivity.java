@@ -1,8 +1,13 @@
 package com.github.iot1009.lab2_scorekeeper;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
 
@@ -102,5 +107,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 secondTeamScore.setText(""+Scorekeeper_Data.getSecondTeamPoint());
                 break;
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.mymenu, menu);
+        return true;
+    }
+
+    /**
+     * @param item:
+     *            includes about section: developer information
+     *            includes settings section: select score system
+     * @return true
+     */
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.about:
+                Toast.makeText(this,"Dong, Phu Sang",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"A00223629",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"IOT1009",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Good Bye",Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.settings:
+                startActivity(new Intent(getApplicationContext(), Settings.class));
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

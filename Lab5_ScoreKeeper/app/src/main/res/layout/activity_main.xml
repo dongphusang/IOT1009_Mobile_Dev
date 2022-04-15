@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/Theme.Lab2_ScoreKeeper"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/mainActivity">
 
 
     <GridLayout
@@ -88,10 +89,4 @@
             style="@style/customRadio"
             android:text="@string/american_foot_sys" />
     </GridLayout>
-
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
