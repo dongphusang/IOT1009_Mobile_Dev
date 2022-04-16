@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,6 +16,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    // declaring components
     Button increaseButton;
     Button decreaseButton;
     TextView firstTeamScore;
@@ -22,6 +24,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Switch teamSelector;
     RadioButton basketBallFormat;
     RadioButton americanFootBallFormat;
+
+    // declaring SavedPreferences keys
+    private static final String SHARED_PREFS = "sharedPrefs";
+    private static final String BASKET_RADIO = "basket_radio";
+    private static final String AMERICA_RADIO = "america_radio";
+    private static final String FIRSTSCORE = "first_team_score";
+    private static final String SECONDSCORE = "second_team_score";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +55,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         basketBallFormat.setOnClickListener(this);
         americanFootBallFormat.setOnClickListener(this);
 
-
+        // pulling saved data
+        loadData();
     }
 
     public void onClick(View v){
@@ -116,12 +126,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return true;
     }
 
-    /**
-     * @param item:
-     *            includes about section: developer information
-     *            includes settings section: select score system
-     * @return true
-     */
+    // about: toast my name, student number, course code
+    // settings: provide an option to save data
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -132,9 +138,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this,"Good Bye",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.settings:
-                startActivity(new Intent(getApplicationContext(), Settings.class));
+                // bundling current value of views and send them to Settings
+                Bundle bundle = new Bundle();
+                Intent i = new Intent(getApplicationContext(), Settings.class);
+                bundle.putStringArray("savedVal",new String[]{""+basketBallFormat.isChecked(), ""+americanFootBallFormat.isChecked(), ""+firstTeamScore.getText(), ""+secondTeamScore.getText()});
+                i.putExtras(bundle);
+
+                // transition to Settings
+                startActivity(i);
                 overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    // get saved data
+    public void loadData() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+
+        basketBallFormat.setChecked(sharedPreferences.getBoolean(BASKET_RADIO,false));
+        americanFootBallFormat.setChecked(sharedPreferences.getBoolean(AMERICA_RADIO, false));
+        firstTeamScore.setText(sharedPreferences.getString(FIRSTSCORE,"0"));
+        secondTeamScore.setText(sharedPreferences.getString(SECONDSCORE,"0"));
     }
 }
